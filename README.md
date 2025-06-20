@@ -25,6 +25,8 @@ yelp-reviews-analysis/
 ├── data/                     # Raw and processed data files (not included in repo)
 ├── snowflake_scripts/        # SQL scripts for flattening tables and analysis
 ├── requirements.txt          # Python dependencies
+├── files_split.py            # Python code to split large files into multiple small files
+├── snowflake_upload.py       # Python file to connect with snowflake and upload files
 └── README.md                 # Project overview
 ```
 
@@ -33,6 +35,10 @@ yelp-reviews-analysis/
 The data used in this project is sourced from the [Yelp Open Dataset](https://business.yelp.com/data/resources/open-dataset/), which includes over 8 million reviews, 200K+ businesses, and various user/business metadata.
 
 Please note: Due to size constraints, the dataset is **not included in this repository**. You can download it directly from the [official Yelp data page](https://business.yelp.com/data/resources/open-dataset/) and place the relevant JSON files in the `data/` folder.
+
+## 🧱 Data Schema
+
+![Data Schema](Schema_diagram.png)
 
 ## 🚀 How to Run
 
