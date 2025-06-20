@@ -13,14 +13,17 @@ Key components include:
 - Natural Language Processing (NLP) for review sentiment
 - Snowflake sql analysis to answer business questions
 
+## 🧊 Snowflake Integration
+
+All SQL transformations, joins, and aggregations were performed using **Snowflake** as the central data warehouse. Additionally, sentiment analysis using **TextBlob** was executed directly within Snowflake using the **Snowpark for Python** and **UDFs**, enabling in-database analytics at scale.
+
 ## 📂 Repository Structure
 
 ```
 yelp-reviews-analysis/
 │
 ├── data/                     # Raw and processed data files (not included in repo)
-├── scripts/                  # Python scripts for preprocessing and modeling
-├── visuals/                  # Output plots and visualizations
+├── snowflake_scripts/        # SQL scripts for flattening tables and analysis
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project overview
 ```
@@ -48,23 +51,11 @@ pip install -r requirements.txt
 
 3. Download the Yelp dataset from the [Yelp Open Dataset page](https://business.yelp.com/data/resources/open-dataset/) and extract it to the `data/` directory.
 
-4. Explore the Jupyter notebooks under the `notebooks/` folder for step-by-step analysis.
-
 ## 🧠 Techniques Used
 
-- Python (pandas, matplotlib, seaborn, nltk, spaCy, gensim)
-- NLP: Tokenization, sentiment analysis, topic modeling (LDA)
-- Data wrangling and transformation
-- Exploratory data analysis (EDA)
-- Visual storytelling with plots
-
-## 📌 Project Status
-
-This project is under active development. Future enhancements include:
-
-- Building a Streamlit dashboard for interactive insights
-- Integrating review classification or recommendation model
-- Deploying insights to a web app or API
+- Python
+- NLP: TextBlob
+- Snowflake SQL for data processing and sentiment analysis via UDFs
 
 ## 📝 License
 
