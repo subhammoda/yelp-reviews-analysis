@@ -86,4 +86,14 @@ if __name__ == "__main__":
     business_upload = SnowflakeUpload("/Users/subhammoda/Documents/Projects/yelp-reviews-analysis/Yelp Dataset/yelp_academic_dataset_business.json", "yelp_business", "business")
     business_upload.establish_conn()
     business_upload.create_table()
-    business_upload.upload_file(True)
+    business_upload.upload_file(False)
+
+    user_upload = SnowflakeUpload("/Users/subhammoda/Documents/Projects/yelp-reviews-analysis/Yelp Dataset/yelp_academic_dataset_user.json", "yelp_user", "user")
+    user_upload.establish_conn()
+    user_upload.create_table()
+    user_upload.upload_file(False)
+
+    tip_upload = SnowflakeUpload("/Users/subhammoda/Documents/Projects/yelp-reviews-analysis/Yelp Dataset/yelp_academic_dataset_tip.json", "yelp_tip", "tip")
+    tip_upload.establish_conn()
+    tip_upload.create_table()
+    tip_upload.upload_file(False)
